@@ -19,6 +19,10 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 //app.use('/api', tarefaRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Bem-vindo à API Backend');
+});
+
 // Inicializando o servidor e fazendo com que ele escute na porta definida
 app.listen(PORT, () => {
   console.log("Servidor rodando na porta " + PORT);

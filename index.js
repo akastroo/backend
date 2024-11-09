@@ -2,7 +2,7 @@
 //import tarefaRoutes from "./routes/tarefaRoutes"
 require('dotenv').config();
 
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 //const cors = require('cors');
 
 const express = require('express');
@@ -25,25 +25,19 @@ app.get('/', (req, res) => {
   res.send('Bem-vindo à API Backend');
 });
 
+// Rota para logar
 
+
+app.use(express.json());
 
 // Configurando as rotas
 app.use('/api', employeeRoutes);
 
-// Inicializando o servidor e fazendo com que ele escute na porta definida
-/*app.listen(PORT, () => {
-  console.log("Servidor rodando na porta " + PORT);
-});*/
+//app.use('/produtos', employeeRoutes);
 
-mongoose
-  .connect(
-    `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@viceri.wn7yt.mongodb.net/?retryWrites=true&w=majority&appName=viceri`,
-  )
-  .then(() => {
-    console.log('Conectou ao banco!');
-    // Agora, inicie o servidor Express após a conexão com o MongoDB
-    app.listen(PORT, () => {
-      console.log(`Servidor rodando na porta ${PORT}`);
-    });
-  })
-  .catch((err) => console.log(err))
+// Inicializando o servidor e fazendo com que ele escute na porta definida
+app.listen(PORT, () => {
+  console.log("Servidor rodando na porta " + PORT);
+});
+
+

@@ -16,6 +16,4 @@ router.put('/employee/:id', employeeController.editarFuncionario);
 // Rota para deletar um funcionário (DELETE)
 router.delete('/employee/:id', employeeController.deletarFuncionario);
 
-
-
 module.exports = router;

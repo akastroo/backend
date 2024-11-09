@@ -48,5 +48,17 @@
       "position": "teste",
       "salary": 50000
     }
+  ],
+  "exercises": [
+    {
+      "id": 1,
+      "title": "teste",
+      "content": "teste testetestetesteteste teste teste teste testetesteteste"
+    },
+    {
+      "id": 2,
+      "title": "teste2",
+      "content": "teste testetestetesteteste teste teste teste testetesteteste"
+    }
   ]
 }
